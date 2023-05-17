@@ -8,6 +8,7 @@
 - Prisma
 - Symbols
 - Tailwind CSS IntelliSense
+- Color Highlight
 
 # Comands
 
@@ -140,3 +141,23 @@ plugins: [require('prettier-plugin-tailwindcss')],
 ```
 
 #### Chave dia 1 é: SHOWMETHECODE
+
+# Parte 2
+
+## Web
+
+### Fontes Utilizadas
+
+#### Roboto
+
+#### bai-jamjuree
+
+### Pacote de Icons
+
+`npm i lucide-react`
+
+## Mobile
+
+### Fontes Utilizadas pelo Expo Google Fonts
+
+`npx expo install @expo-google-fonts/roboto @expo-google-fonts/bai-jamjuree expo-font`
