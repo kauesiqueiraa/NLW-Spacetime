@@ -161,3 +161,56 @@ plugins: [require('prettier-plugin-tailwindcss')],
 ### Fontes Utilizadas pelo Expo Google Fonts
 
 `npx expo install @expo-google-fonts/roboto @expo-google-fonts/bai-jamjuree expo-font`
+
+### Para utilizar arquivos SVG, primeiro instalar a biblioteca SVG
+
+`npx expo install react-native-svg`
+
+### E depois a biblioteca SVG-transformer - Git: https://github.com/kristerkari/react-native-svg-transformer
+
+`npm i -D react-native-svg-transformer`
+
+### após isso criar um arquivo na raiz do mobile com o nome de "metro.config.js" e colar esse codigo:
+
+```
+const { getDefaultConfig } = require("expo/metro-config");
+
+module.exports = (() => {
+  const config = getDefaultConfig(__dirname);
+
+  const { transformer, resolver } = config;
+
+  config.transformer = {
+    ...transformer,
+    babelTransformerPath: require.resolve("react-native-svg-transformer"),
+  };
+  config.resolver = {
+    ...resolver,
+    assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
+    sourceExts: [...resolver.sourceExts, "svg"],
+  };
+
+  return config;
+})();
+```
+
+### e caso esteja usando Typescript, colar esse codigo a seguir, no arquivo "assets.d.ts"
+
+```
+declare module "*.svg" {
+  import React from 'react';
+  import { SvgProps } from "react-native-svg";
+  const content: React.FC<SvgProps>;
+  export default content;
+}
+```
+
+## Backend
+
+### instalação do zod
+
+`npm i zod`
+
+### Plugin de Cors
+
+`npm i @fastify/cors`
