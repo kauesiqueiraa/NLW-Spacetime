@@ -214,3 +214,49 @@ declare module "*.svg" {
 ### Plugin de Cors
 
 `npm i @fastify/cors`
+
+## chave dia dois "BUILDTHEFUTURE"
+
+# 3 Dia
+
+## Back-End
+
+### Pacote dotenv
+
+`npm i dotenv -D`
+
+### Para fazer requisições HTTP instalar o Axios
+
+`npm i axios`
+
+### para utilizar o JWT
+
+`npm i @fastify/jwt`
+
+## Front-End
+
+### Para fazer requisições HTTP instalar o Axios no Web para fazer requisição no back-end
+
+`npm i axios`
+
+### Para extrair informações de dentro do token
+
+`npm i jwt-decode`
+
+## Mobile
+
+### Pacote Expo Auth Session para adcionar autenticação web browser - https://docs.expo.dev/versions/latest/sdk/auth-session/
+
+`npx expo install expo-auth-session expo-crypto`
+
+### para usar o back-end no mobile
+
+`npm i axios`
+
+### Como Mobile não tem cookie, vamos utilizar o expo secure store - https://docs.expo.dev/versions/latest/sdk/securestore/
+
+`npx expo install expo-secure-store`
+
+### Expo Router para fazer a mesma funcionalidade de rotas que no Next.js - https://docs.expo.dev/guides/routing-and-navigation/
+
+`npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar`
