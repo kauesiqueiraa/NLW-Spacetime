@@ -260,3 +260,29 @@ declare module "*.svg" {
 ### Expo Router para fazer a mesma funcionalidade de rotas que no Next.js - https://docs.expo.dev/guides/routing-and-navigation/
 
 `npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar`
+
+# dia 4
+
+## Web
+
+### plugin para mexer no checkbox Tailwind Forms - https://github.com/tailwindlabs/tailwindcss-forms
+
+`npm install -D @tailwindcss/forms`
+
+### E dentro do tailwind.config.js colar o
+
+```
+ plugins: [
+    require('@tailwindcss/forms'),
+ ]
+```
+
+## Back-End
+
+### Plugin Fastify Multipart
+
+`npm i @fastify/multipart`
+
+### Modulo Fastify Static para que uma pasta do back fique publica
+
+`npm i @fastify/static`
