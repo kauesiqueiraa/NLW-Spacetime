@@ -297,3 +297,5 @@ declare module "*.svg" {
 
 `npm i js-cookie`
 `npm i --save-dev @types/js-cookie`
+
+### parei no tempo de 37:06 do video

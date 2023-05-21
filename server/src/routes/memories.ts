@@ -4,7 +4,7 @@ import { prisma } from '../lib/prisma'
 
 export async function memoriesRoutes(app: FastifyInstance) {
   app.addHook('preHandler', async (request) => {
-    request.jwtVerify()
+    await request.jwtVerify()
   })
 
   // Listagem de todas as Memórias
@@ -23,6 +23,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
         id: memory.id,
         coverUrl: memory.coverUrl,
         excerpt: memory.content.substring(0, 115).concat('...'),
+        createdAt: memory.createdAt,
       }
     })
   })
@@ -51,7 +52,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
   // Criação de uma Memória
   app.post('/memories', async (request) => {
     const bodySchema = z.object({
-      content: z.string().uuid(),
+      content: z.string(),
       coverUrl: z.string(),
       isPublic: z.coerce.boolean().default(false),
     })
@@ -79,7 +80,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
     const { id } = paramsSchema.parse(request.params)
 
     const bodySchema = z.object({
-      content: z.string().uuid(),
+      content: z.string(),
       coverUrl: z.string(),
       isPublic: z.coerce.boolean().default(false),
     })

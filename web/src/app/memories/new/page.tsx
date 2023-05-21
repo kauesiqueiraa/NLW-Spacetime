@@ -1,4 +1,4 @@
-import { NewMemoryForm } from '@/components/NemMemoryForm'
+import { NewMemoryForm } from '@/components/NewMemoryForm'
 import { ChevronLeft } from 'lucide-react'
 import Link from 'next/link'
 
