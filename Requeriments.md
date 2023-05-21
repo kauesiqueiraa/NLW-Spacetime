@@ -286,3 +286,14 @@ declare module "*.svg" {
 ### Modulo Fastify Static para que uma pasta do back fique publica
 
 `npm i @fastify/static`
+
+### senha NEVERSTOPLEARNING e NEXTLEVELWEEK
+
+# Dia 5
+
+## Web
+
+### lib js-cookie
+
+`npm i js-cookie`
+`npm i --save-dev @types/js-cookie`
