@@ -298,4 +298,16 @@ declare module "*.svg" {
 `npm i js-cookie`
 `npm i --save-dev @types/js-cookie`
 
-### parei no tempo de 37:06 do video
+### para manipulação de datas
+
+`npm i dayjs`
+
+## Mobile
+
+### expo image picker
+
+`npx expo install expo-image-picker`
+
+### para manipulação de datas
+
+`npm i dayjs`
